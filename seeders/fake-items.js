@@ -9,8 +9,8 @@ module.exports = {
             items.push({
                 name: faker.company.name(),
                 description: faker.lorem.sentences(14),
-                created_at: new Date(),
-                updated_at: new Date(),
+                createdAt: new Date(),
+                updatedAt: new Date(),
             });
             if (items.length === batchSize) {
                 await queryInterface.bulkInsert('Items', items, {});
